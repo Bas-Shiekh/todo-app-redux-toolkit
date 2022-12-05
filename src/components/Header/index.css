@@ -1,0 +1,43 @@
+Header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  box-shadow: 0 4px 5px 0 #eeeeeeee;
+}
+
+Header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+Header nav a {
+  text-decoration: none;
+  color: #333333;
+  height: 100%;
+  padding: 0.5rem;
+  position: relative;
+}
+
+Header nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333333;
+  transition: all 0.2s ease-in-out;
+}
+
+Header nav a:hover::before {
+  width: 100%;
+}
+
+Header h1 {
+  font-size: 2rem;
+}

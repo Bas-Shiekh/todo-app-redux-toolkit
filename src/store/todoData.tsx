@@ -12,6 +12,9 @@ const todoDataSlice = createSlice({
     deleteTodo: (state, actions) => {
       state.data.splice(actions.payload, 1);
     },
+    editTodo: (state, actions) => {
+      state.data[actions.payload.index] = actions.payload.newTodo;
+    },
   },
 });
 

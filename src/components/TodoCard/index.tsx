@@ -1,18 +1,46 @@
-import { DeleteOutlined } from "@ant-design/icons";
-import { FC } from "react";
+import { DeleteOutlined, EditOutlined, CheckOutlined } from "@ant-design/icons";
+import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Itodo } from "../../interfaces";
 import { todoDataActions } from "../../store/todoData";
 import "./index.css";
 
 const TodoCard: FC<Itodo> = ({ todo, index }) => {
+  const [newTodo, setNewTodo] = useState<string>(todo);
+  const [isEdit, setIsEdit] = useState<boolean>(false);
   const dispatch = useDispatch();
-  const { deleteTodo } = todoDataActions;
+  const { deleteTodo, editTodo } = todoDataActions;
+
+  const onFinish = (e: React.FormEvent): void => {
+    e.preventDefault();
+    dispatch(editTodo({ index, newTodo }));
+    setIsEdit(false);
+  };
 
   return (
     <div className="todo-card">
-      <p>{todo}</p>
-      <DeleteOutlined onClick={() => dispatch(deleteTodo(index))} />
+      {!isEdit ? (
+        <>
+          <p>{todo}</p>
+          <EditOutlined onClick={() => setIsEdit(true)} />
+          <DeleteOutlined onClick={() => dispatch(deleteTodo(index))} />
+        </>
+      ) : (
+        <form
+          onSubmit={(e) => {
+            onFinish(e);
+          }}
+        >
+          <input
+            type="text"
+            value={newTodo}
+            onChange={(e) => setNewTodo(e.target.value)}
+          />
+          <button type="submit">
+            <CheckOutlined />
+          </button>
+        </form>
+      )}
     </div>
   );
 };

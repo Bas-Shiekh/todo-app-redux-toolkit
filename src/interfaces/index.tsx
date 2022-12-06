@@ -4,4 +4,8 @@ interface IuserDate {
   remember: boolean;
 }
 
-export type { IuserDate };
+interface Itodo {
+  todo: string;
+}
+
+export type { IuserDate, Itodo };

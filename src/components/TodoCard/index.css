@@ -1,0 +1,69 @@
+.todo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 1px solid #cccccc;
+}
+
+.todo-card p {
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  opacity: 0.8;
+}
+
+.todo-card .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.todo-card .icons span {
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.todo-card .icons span:hover {
+  transform: scale(1.2);
+}
+
+.todo-card .icons span:nth-child(1) {
+  color: rgb(16, 207, 38);
+}
+
+.todo-card .icons span:nth-child(2) {
+  color: rgb(207, 16, 16);
+}
+
+.todo-card form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.todo-card form input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 0;
+  outline: 1px solid #cccccc;
+}
+
+.todo-card form button {
+  background-color: inherit;
+  border: 0;
+  outline: 0;
+}
+
+.todo-card form button span {
+  color: rgb(0, 102, 255);
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.todo-card form button span:hover {
+  transform: scale(1.2);
+}

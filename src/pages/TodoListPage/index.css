@@ -1,0 +1,55 @@
+#todo-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8rem 0 2rem;
+  gap: 1rem;
+}
+
+#todo-page > form {
+  width: 40%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-page > form input {
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  border: 0;
+  outline: 1px solid #cccccc;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#todo-page > form button {
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+  background-color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+}
+
+#todo-page > form button:hover {
+  background-color: #888888;
+  outline: 1px solid #666666;
+}
+
+#todo-page .todo-container {
+  width: 40%;
+  outline: 1px solid #cccccc;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}

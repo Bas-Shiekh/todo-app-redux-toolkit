@@ -1,3 +1,4 @@
 import Header from "./Header";
+import TodoCard from "./TodoCard";
 
-export { Header };
+export { Header, TodoCard };

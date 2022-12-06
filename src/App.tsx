@@ -1,6 +1,8 @@
 import { FC } from "react";
+import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage, SignUpPage, LoginPage, TodoListPage } from "./pages";
+import store from "./store";
 import "./App.css";
 
 const App: FC = () => {
@@ -29,7 +31,9 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
     </div>
   );
 };

@@ -5,8 +5,8 @@ import userData from "./userData";
 const store = configureStore({
   reducer: {
     userAuth,
-    userData
-  }
+    userData,
+  },
 });
 
 export default store;

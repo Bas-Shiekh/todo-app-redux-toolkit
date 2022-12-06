@@ -6,7 +6,6 @@ const TodoListPage: FC = () => {
   return (
     <>
       <Header />
-      <div>hello from todo list page</div>
     </>
   );
 };

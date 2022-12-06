@@ -15,10 +15,10 @@ const SignUpPage: FC = () => {
             placeholder="Enter your first name here"
           />
           <input
-          type="text"
-          name="lastName"
-          placeholder="Enter your last name here"
-        />
+            type="text"
+            name="lastName"
+            placeholder="Enter your last name here"
+          />
         </div>
         <input
           type="text"
@@ -30,7 +30,7 @@ const SignUpPage: FC = () => {
           name="password"
           placeholder="Enter your password here"
         />
-                <input
+        <input
           type="password"
           name="confirm-password"
           placeholder="Enter your confirm password here"

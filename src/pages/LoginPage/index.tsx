@@ -16,7 +16,7 @@ const LoginPage: FC = () => {
 
   const onFinish = (): void => {
     dispatch(login(userData));
-    navigate('/list')
+    navigate("/list");
   };
 
   return (

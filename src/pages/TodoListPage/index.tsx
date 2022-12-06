@@ -14,7 +14,7 @@ const TodoListPage: FC = () => {
   const [todo, setTodo] = useState<string>("");
 
   useEffect(() => {
-    if (!userAuth.isLoggedIn) navigate('/login');
+    if (!userAuth.isLoggedIn) navigate("/login");
   }, [userAuth.isLoggedIn]);
 
   const handleTodo = (e: React.FormEvent): void => {
@@ -31,9 +31,7 @@ const TodoListPage: FC = () => {
           placeholder="Write your todo here"
           onChange={(e) => setTodo(e.target.value)}
         />
-        <button type="submit">
-          add
-        </button>
+        <button type="submit">add</button>
       </form>
       <div className="todo-container">
         {todoData.data.map((e: string, i: number) => (

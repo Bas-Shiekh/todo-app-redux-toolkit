@@ -30,7 +30,7 @@ const TodoListPage: FC = () => {
       </div>
       <div className="todo-container">
         {todoData.data.map((e: string, i: number) => (
-          <TodoCard todo={e} index={i} />
+          <TodoCard todo={e} index={i} key={i} />
         ))}
       </div>
     </>

@@ -6,6 +6,7 @@ interface IuserDate {
 
 interface Itodo {
   todo: string;
+  index: number;
 }
 
 export type { IuserDate, Itodo };

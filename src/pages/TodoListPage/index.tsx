@@ -15,7 +15,7 @@ const TodoListPage: FC = () => {
 
   useEffect(() => {
     if (!userAuth.isLoggedIn) navigate("/login");
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleTodo = (e: React.FormEvent): void => {

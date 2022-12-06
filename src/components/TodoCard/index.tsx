@@ -22,8 +22,10 @@ const TodoCard: FC<Itodo> = ({ todo, index }) => {
       {!isEdit ? (
         <>
           <p>{todo}</p>
-          <EditOutlined onClick={() => setIsEdit(true)} />
-          <DeleteOutlined onClick={() => dispatch(deleteTodo(index))} />
+          <div className="icons">
+            <EditOutlined onClick={() => setIsEdit(true)} />
+            <DeleteOutlined onClick={() => dispatch(deleteTodo(index))} />
+          </div>
         </>
       ) : (
         <form
